@@ -96,11 +96,11 @@ Option 1: Installation of the latest stable CDPKit release deposited on [PyPI](h
 $ pip install cdpkit
 ```
 
-If available for your platform and Python version, this command will directly install a pre-built binary package (wheel file)
-including the CDPL Python bindings and bundled command line tools. The command line tools are installed alongside the Python
-package (for example, in ``site-packages/CDPL``) and can be added to your ``PATH`` if desired. If a matching binary package cannot
-be found, the source code package will be downloaded and an on-the-fly build is attempted. For a successful build the following
-requirements and dependencies apply:
+If available for your platform and Python version, this command will directly install a pre-built binary package (wheel file).
+The package includes the CDPL Python bindings and bundled command line tools installed alongside the Python package (for example,
+in `site-packages/CDPL`), which can be added to your `PATH` if desired. If a matching binary package cannot be found, the source
+code package will be downloaded and an on-the-fly build is attempted. For a successful build the following requirements and
+dependencies apply:
 
 - C++17 compliant compiler (mandatory)
 - boost-devel (V >= 1.63, mandatory)
