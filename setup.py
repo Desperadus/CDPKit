@@ -36,6 +36,8 @@ def postproc_manifest(cmake_manifest):
 
     proc_manifest = []
     inst_dir = path.dirname(cmake_manifest[0])
+    
+    # Add all files from the install directory (including scripts)
     extra_files = [path.join(inst_dir, f) for f in listdir(inst_dir) if path.isfile(path.join(inst_dir, f))]
 
     for extra_file in extra_files:
@@ -87,19 +89,5 @@ setup(
     python_requires='>=3.8',
     install_requires=['numpy>=1.17'],
     cmake_args=['-DPYPI_PACKAGE_BUILD:BOOL=ON', '-DCMAKE_BUILD_TYPE:STRING=Release', '-Wno-dev'],
-    scripts=[
-        'Libs/Python/CDPL/confgen',
-        'Libs/Python/CDPL/tautgen', 
-        'Libs/Python/CDPL/structgen',
-        'Libs/Python/CDPL/genfraglib',
-        'Libs/Python/CDPL/isogen',
-        'Libs/Python/CDPL/psdcreate',
-        'Libs/Python/CDPL/psdinfo',
-        'Libs/Python/CDPL/psdmerge',
-        'Libs/Python/CDPL/psdscreen',
-        'Libs/Python/CDPL/shapescreen',
-        'Libs/Python/CDPL/simscreen',
-        'Libs/Python/CDPL/subsearch',
-    ],
     cmake_process_manifest_hook=postproc_manifest,
 )
