@@ -557,9 +557,9 @@ endif(NOT PYPI_PACKAGE_BUILD)
 add_subdirectory(External)
 add_subdirectory(Libs)
 
-if(CDPKIT_BUILD_APPS)
+if(CDPKIT_BUILD_APPS OR PYPI_PACKAGE_BUILD)
   add_subdirectory(Apps)
-endif(CDPKIT_BUILD_APPS)
+endif(CDPKIT_BUILD_APPS OR PYPI_PACKAGE_BUILD)
 
 if(NOT PYPI_PACKAGE_BUILD)
   add_subdirectory(Doc)
