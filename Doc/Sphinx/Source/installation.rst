@@ -15,8 +15,8 @@ CDPKit can be installed in different ways:
   provided and for users who wish to contribute to the project.
 
 - :ref:`Installation via pip <installation_using_pip>`.
-  :program:`pip` will only install the CDPL Python bindings. This is the best option for users who
-  only want to develop or run Python software that uses CDPL functionality.
+  :program:`pip` will install the CDPL Python bindings together with bundled command line tools.
+  This is the best option for users who want to manage the binaries via Python packaging.
 
 .. _installation_via_installer_package:
 
@@ -263,13 +263,14 @@ Installation using :program:`pip`
 
 .. note::
    
-   :program:`pip` will only install the CDPL Python bindings. This is the recommended option for users who
-   only want to develop or run Python software that uses CDPL functionality.
+   :program:`pip` installs the CDPL Python bindings along with bundled command line tools. The command line
+   tools are installed alongside the Python package (for example, in :file:`site-packages/CDPL`) and can be
+   added to your :envvar:`PATH` if desired.
 
 Installation of the latest binary release
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The latest binary release of the CDPL Python bindings deposited on `PyPI <https://pypi.org/project/CDPKit>`_
+The latest binary release of the CDPL Python bindings and bundled command line tools deposited on `PyPI <https://pypi.org/project/CDPKit>`_
 can be installed by issuing the following command in a terminal session:
 
 .. code-block:: shell
@@ -283,7 +284,7 @@ the CDPKit sources is attempted. This will only proceed without errors if a prop
 Installation via a build of the sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For a successful build of the CDPL Python bindings the information provided in section `Installation from source`_ applies also
+For a successful build of the CDPL Python bindings and bundled command line tools the information provided in section `Installation from source`_ applies also
 here. However, since a full-featured CDPKit build is not required the list of requirements is a bit shorter:
 
 =============================  =============  ================================================================================
@@ -320,4 +321,3 @@ Enter (:command:`cd`) the CDPKit source code folder and then from within the fol
 .. code-block:: shell
                 
                 $ pip install .
-

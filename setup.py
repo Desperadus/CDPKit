@@ -64,8 +64,8 @@ higher-level cheminformatics software application.
 
 In addition to the CDPL C++ API, an equivalent Python-interfacing layer is provided that allows to harness all of CDPL's
 functionality easily from Python code.
-This PyPI project hosts source and pre-built binary packages (wheels) for a comfortable installation of the CDPL Python bindings on
-Linux, macOS and Windows via the **pip** command.
+This PyPI project hosts source and pre-built binary packages (wheels) for a comfortable installation of the CDPL Python bindings and
+bundled command line tools on Linux, macOS and Windows via the **pip** command.
 
 For more information about CDPKit and the CDPL please visit https://cdpkit.org.
 '''
