@@ -24,7 +24,40 @@ and other properties of potential drug candidates. An example of the integration
 
 This short guide will help you get started with CDPKit and introduce you to some of its key features.
 
-### Installation
+## Installation
+
+### Installation via the `pip` command
+
+Option 1: Installation of the latest stable CDPKit release deposited on [PyPI](https://pypi.org/Projects/CDPKit):
+
+```console
+$ pip install cdpkit
+```
+
+If available for your platform and Python version, this command will directly install a pre-built binary package (wheel file).
+The package includes the CDPL Python bindings and bundled command line tools installed alongside the Python package (for example,
+in `site-packages/CDPL`), which can be added to your `PATH` if desired by running `export PATH="$(python -c 'import CDPL; import os; print(os.path.dirname(CDPL.__file__))'):$PATH"`. If a matching binary package cannot be found, the source
+code package will be downloaded and an on-the-fly build is attempted. For a successful build the following requirements and
+dependencies apply:
+
+- C++17 compliant compiler (mandatory)
+- boost-devel (V >= 1.63, mandatory)
+- python-devel and Python interpreter (V >= 3.6, mandatory)
+- cairo-devel (V >= 1.14, optional)
+
+Option 2: Build and installation of the current development version by specifying the GitHub repository URL:
+
+```console
+$ pip install git+https://github.com/molinfo-vienna/CDPKit.git
+```
+
+Option 3: Installation under specification of a local directory containing the CDPKit sources:
+
+Change your CWD to the CDPKit source code folder and then from within the folder run
+
+```console
+$ pip install .
+```
 
 Currently, CDPKit can be installed in three ways: i) using one of the CDPKit binary installers provided for download
 on the [Releases](https://github.com/molinfo-vienna/CDPKit/releases) page, ii) installation after building CDPKit from source and
@@ -87,39 +120,6 @@ $ make doc
 ```
 
 should successfully build the CDPKit documentation pages which can then be found in `<BUILD-DIR>/Doc/html`.
-
-#### Installation via the `pip` command
-
-Option 1: Installation of the latest stable CDPKit release deposited on [PyPI](https://pypi.org/Projects/CDPKit):
-
-```console
-$ pip install cdpkit
-```
-
-If available for your platform and Python version, this command will directly install a pre-built binary package (wheel file).
-The package includes the CDPL Python bindings and bundled command line tools installed alongside the Python package (for example,
-in `site-packages/CDPL`), which can be added to your `PATH` if desired. If a matching binary package cannot be found, the source
-code package will be downloaded and an on-the-fly build is attempted. For a successful build the following requirements and
-dependencies apply:
-
-- C++17 compliant compiler (mandatory)
-- boost-devel (V >= 1.63, mandatory)
-- python-devel and Python interpreter (V >= 3.6, mandatory)
-- cairo-devel (V >= 1.14, optional)
-
-Option 2: Build and installation of the current development version by specifying the GitHub repository URL:
-
-```console
-$ pip install git+https://github.com/molinfo-vienna/CDPKit.git
-```
-
-Option 3: Installation under specification of a local directory containing the CDPKit sources:
-
-Change your CWD to the CDPKit source code folder and then from within the folder run
-
-```console
-$ pip install .
-```
 
 ### Basic Usage
 
