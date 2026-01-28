@@ -25,5 +25,15 @@
 
 export CDPKIT_TEST_DATA_DIR="@CDPKIT_TEST_DATA_DIR@"
 export PYTHONPATH="$PYTHONPATH:@CDPL_PYTHON_DIR@"
+export CDPKIT_BIN_DIR="@CMAKE_CURRENT_BINARY_DIR@/Libs/Python/CDPL"
+
+case "$(uname -s)" in
+    Darwin)
+        export DYLD_LIBRARY_PATH="$CDPKIT_BIN_DIR:${DYLD_LIBRARY_PATH}"
+        ;;
+    *)
+        export LD_LIBRARY_PATH="$CDPKIT_BIN_DIR:${LD_LIBRARY_PATH}"
+        ;;
+esac
 
 "@PYTHON_EXECUTABLE@" "$1"
